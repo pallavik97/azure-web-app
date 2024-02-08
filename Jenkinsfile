@@ -38,7 +38,7 @@ pipeline {
 
     post {
         always {
-            // Clean up after the pipeline finishes
+            mail to: 'pallavikdevops@gmail.com', subject: 'Pipeline Completed', body: 'The pipeline has completed successfully.'
         }
     }
 }
