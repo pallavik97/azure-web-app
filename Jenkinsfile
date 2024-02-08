@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'your-git-credentials-id', url: 'https://github.com/your-username/your-repo.git'
+                git url: 'https://github.com/pallavik97/azure-web-app'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('your-docker-image-name:tag', './docker')
+                    docker.build('pkdocker:latest', './docker')
                 }
             }
         }
